@@ -9,7 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wekan/wekan.git"
+    "url": "git+https://github.com/wekan/wekan.git",
+    "start" : ".meteor/heroku_build/bin/node .meteor/heroku_build/app/main.js"
   },
   "license": "MIT",
   "bugs": {
