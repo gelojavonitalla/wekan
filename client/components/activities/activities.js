@@ -1,10 +1,6 @@
 const activitiesPerPage = 20;
 
 BlazeComponent.extendComponent({
-  template() {
-    return 'activities';
-  },
-
   onCreated() {
     // XXX Should we use ReactiveNumber?
     this.page = new ReactiveVar(1);
@@ -55,7 +51,7 @@ BlazeComponent.extendComponent({
   cardLink() {
     const card = this.currentData().card();
     return card && Blaze.toHTML(HTML.A({
-      href: FlowRouter.path(card.absoluteUrl()),
+      href: card.absoluteUrl(),
       'class': 'action-card',
     }, card.title));
   },

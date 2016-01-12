@@ -1,11 +1,6 @@
 ecmaFeatures:
   experimentalObjectRestSpread: true
 
-plugins:
-  - meteor
-
-parser: babel-eslint
-
 rules:
   strict: 0
   no-undef: 2
@@ -27,12 +22,14 @@ rules:
   camelcase: 2
   comma-spacing: 2
   comma-style: 2
+  eol-last: 2
   linebreak-style: [2, unix]
   new-parens: 2
   no-lonely-if: 2
   no-multiple-empty-lines: 2
   no-nested-ternary: 2
   no-spaced-func: 2
+  no-trailing-spaces: 2
   operator-linebreak: 2
   quotes: [2, single]
   semi-spacing: 2
@@ -50,39 +47,25 @@ rules:
   prefer-spread: 2
   prefer-template: 2
 
-  # eslint-plugin-meteor
-  ## Meteor API
-  meteor/globals: 2
-  meteor/core: 2
-  meteor/pubsub: 2
-  meteor/methods: 2
-  meteor/check: 2
-  meteor/connections: 2
-  meteor/collections: 2
-  meteor/session: [2, 'no-equal']
-
-  ## Best practices
-  meteor/no-session: 0
-  meteor/no-zero-timeout: 2
-  meteor/no-blaze-lifecycle-assignment: 2
-
-settings:
-  meteor:
-
-    # Our collections
-    collections:
-      - AccountsTemplates
-      - Activities
-      - Attachments
-      - Boards
-      - CardComments
-      - Cards
-      - Lists
-      - UnsavedEditCollection
-      - Users
-
 globals:
+  # Meteor globals
+  Meteor: false
+  Session: false
+  HTML: false
+  check: false
+  Tracker: false
+  Blaze: false
+  Accounts: false
+  Match: false
+  Mongo: false
+  Random: false
+  ReactiveVar: false
+  Email: false
+  Template: false
+
   # Exported by packages we use
+  '$': false
+  _: false
   autosize: false
   Avatar: true
   Avatars: true
@@ -108,6 +91,17 @@ globals:
   T9n: false
   TAPi18n: false
 
+  # Our collections
+  AccountsTemplates: true
+  Activities: true
+  Attachments: true
+  Boards: true
+  CardComments: true
+  Cards: true
+  Lists: true
+  UnsavedEditCollection: true
+  Users: true
+
   # Our objects
   CSSEvents: true
   EscapeActions: true
@@ -121,6 +115,7 @@ globals:
   Utils: true
   InlinedForm: true
   UnsavedEdits: true
+  Notifications: true
 
   # XXX Temp, we should remove these
   allowIsBoardAdmin: true

@@ -276,11 +276,14 @@ kbd
 .fa.fa-times-thin:before
   content: '\00d7';
 
-.fa.fa-globe.colorful
+.fa.fa-globe.colorful, .fa.fa-bell.colorful
   color: #4caf50
 
-.fa.fa-lock.colorful
+.fa.fa-lock.colorful, .fa.fa-bell-slash.colorful
   color: #f44336
+
+.fa.fa-eye.colorful
+  color: #4336f4
 
 .pop-over .pop-over-list li a:not(.disabled):hover
   .fa, .fa.colorful
@@ -355,3 +358,15 @@ a
 @keyframes flexGrowIn
   from
     flex-basis: 0
+
+@media screen and (max-width: 800px)
+  #content
+    margin: 1px 0px 49px 0px
+    height: calc(100% - 96px)
+
+    > .wrapper
+      margin-top: 0px
+
+  .wrapper
+    height: 100%
+    margin: 0px
