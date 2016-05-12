@@ -1,3 +1,27 @@
+# v0.11
+
+This release adds the following new features:
+
+* Notification system with email notifications of the changes in a board,
+  a list or on a card;
+* Show the exact time when hovering the activity time;
+* Allow to edit more easily longer card titles by resizing the input box;
+* Add shortcuts to move cards to the top or the bottom of a list;
+* A new log-in button on the public board view to sign in, even if the board
+  is published;
+
+and fixes the following bugs:
+
+* Fix the syntax of the docker-compose.yml;
+* Use the correct pluralization of emoji;
+* Only publish required user data and keep the hashed passwords confidential;
+* Fix the generation and alignment of the initials avatars;
+* Only display the buttons in the board header, if the data is avialable
+  and the user is able to use it;
+
+Thanks to GitHub users alayek, AlexanderS, choclin, floatinghotpot, ForNeVeR,
+seschwar, and TheElf for their contributions.
+
 # v0.10.1
 
 This patch release fixes two bugs on Sandstorm:
@@ -98,8 +122,8 @@ the popover was new). New features includes:
 * Assign and unassign members to cards;
 * Archive cards (though restoration is not yet possible);
 * Board stars;
-* Markdown and emojies support in comments and card description;
-* Emojies auto-completion in the text editor;
+* Markdown and emoji support in comments and card description;
+* Emoji auto-completion in the text editor;
 * Some keyboard shortcuts (eg `Ctrl`+`Enter` to submit a multi-line input).
 
 We also introduced basic support for the [Sandstorm](https://sandstorm.io)
